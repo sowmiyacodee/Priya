@@ -1,0 +1,74 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-JS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<center><h2>Student Records</h2></center>
+    <table>
+        <tbody><tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                	<h3>Student Form</h3>
+                    <div>
+                        <label>Full Name</label>
+                        <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                        <input type="text" name="userName" id="userName" placeholder="Enter the user Name">
+                    </div>
+                    <div>
+                        <label>Rollno</label>
+                        <label class="validation-error hide" id="rollNovalidationError">This field is required</label>
+    
+                        <input type="text" name="rollNo" id="rollNo" placeholder="Enter the Roll number">
+                    </div>
+                    
+                    <div>
+                        <label>Student Class</label>
+                        <label class="validation-error hide" id="stdClassvalidationError">This field is required</label>
+                       <!--Input Student Class-->
+                        <input type="text" name="stdClass" id="stdClass" placeholder="Enter the Student Class">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <label>Total Subject</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="tsubvalidationError">This field is required</label>
+                        <!--Input Total Subject-->
+                        <input type="number" name="tsub" id="tsub" placeholder="Enter the Total Subjects">
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        <label class="validation-error hide" id="agevalidationError">This field is required</label>
+                        <input type="number" name="age" id="age" placeholder="Enter the Age">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="stdlist" style="background-color: #C2976D;">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th> Roll no</th>
+                            <th>Class</th>
+                            <th>Total Subject</th>
+                            <th>Age</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody></table>
+    <!-- JS File-->
+    <script src="JS/script.js"></script>
+
+
+</body></html>
